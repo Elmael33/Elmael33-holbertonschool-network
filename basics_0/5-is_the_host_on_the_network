@@ -3,7 +3,6 @@
 
 # Check if an argument is provided
 if [ $# -eq 0 ]; then
-    # Display an error message if is not provided
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
     # Ping IP address 5x times
