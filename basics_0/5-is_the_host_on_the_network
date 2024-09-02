@@ -2,9 +2,11 @@
 # Script for ping IP address passed as an argument
 
 # Check if an argument is provided
-if [ $# -eq 0 ]; then
-    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
-else
-    # Ping IP address 5x times
-    ping -c 5 "$1"
+if [ -z "$1" ]; then
+  # Display an error message if is not provided
+  echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+  exit 1
 fi
+
+# Ping IP address 5x times
+ping -c 5 "$1"
